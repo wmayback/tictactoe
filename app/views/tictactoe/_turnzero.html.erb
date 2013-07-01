@@ -28,6 +28,8 @@
 <script>
 
 function canvasClicked1(){
+if (clicks = 0);
+{
 var c=document.getElementById("canv1");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
@@ -36,8 +38,11 @@ var c=document.getElementById("canv3");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75);
-}
+clicks = clicks + 1;
+}}
 function canvasClicked2(){
+if (clicks = 0);
+{
 var c=document.getElementById("canv2");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
@@ -46,7 +51,7 @@ var c=document.getElementById("canv1");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75)
-}
+}}
 function canvasClicked3(){
 var c=document.getElementById("canv3");
 var ctx=c.getContext("2d");
