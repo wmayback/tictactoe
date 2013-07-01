@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <title> William Mayback's Tic Tac Toe Challenge </title>
+      <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+      <style>
+      body { width: 1000px; margin: 20px auto;}
+      </style>
+    </head>
+
+    <body>
+      <h1> William Mayback's Tic Tac Toe Challenge <h1>
+
+          <% if session["weapon"].present? %>
+            <h2> <%= link_to "Restart",  "/tictactoe/query" %> <h2>
+          <%else%>
+            <h2> <%= link_to "Try Me!", "/tictactoe/query" %> <h2>
+          <%end%>
+
+          <% if session["weapon"] == "O"%>
+          <%= "You've chosen the sword of O. Good luck..." %>
+          <%elsif session["weapon"] == "X" %>
+          <%="You've chosen the power of X. May the force be with you..."%>
+          <%end%>
+
+      <div>
+            <% if session["turnstyle"] == "robot's advantage" %>
+            <%= render 'turnzero' %>
+            <% else %>
+            <%= render 'gametime' %>
+            <% end %>
+      </div>
+
+    </body>
+</html>

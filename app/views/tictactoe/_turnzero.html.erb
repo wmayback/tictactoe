@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> "William Mayback's Tic Tac Toe Challenge" </title>
+      <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+      <style>
+      body { width: 1000px; margin: 20px auto;}
+      </style>
+    </head>
+
+       <ul>
+            <li style="list-style-type: none;">
+              <canvas id = "canv1" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked1()"></canvas>
+              <canvas id = "canv2" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked2()"></canvas>
+              <canvas id = "canv3" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked3()"></canvas></li>
+            <li style="list-style-type: none;">
+              <canvas id = "canv4" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked4()"></canvas>
+              <canvas id = "canv5" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked5()"></canvas>
+              <canvas id = "canv6" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked6()"></canvas></li>
+            <li style="list-style-type: none;">
+              <canvas id = "canv7" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked7()"></canvas>
+              <canvas id = "canv8" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked8()"></canvas>
+              <canvas id = "canv9" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked9()"></canvas></li>
+      </ul>
+
+<!-- turn 1 logic -->
+
+<script>
+
+function canvasClicked1(){
+var c=document.getElementById("canv1");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv3");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+}
+function canvasClicked2(){
+var c=document.getElementById("canv2");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv1");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75)
+}
+function canvasClicked3(){
+var c=document.getElementById("canv3");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv1");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+}
+function canvasClicked4(){
+var c=document.getElementById("canv4");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv1");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75)
+}
+{
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+}
+function canvasClicked6(){
+var c=document.getElementById("canv6");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv9");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75)
+}
+function canvasClicked7(){
+var c=document.getElementById("canv7");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv9");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+}
+function canvasClicked8(){
+var c=document.getElementById("canv8");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv9");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75)
+}
+function canvasClicked9(){
+var c=document.getElementById("canv9");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv7");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+}
+</script>
+
+</html>

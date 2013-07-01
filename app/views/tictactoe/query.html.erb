@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <title> William Mayback's Tic Tac Toe Challenge </title>
+      <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+      <style>body { width: 1000px; margin: 20px auto;} </style>
+    </head>
+
+    <body>
+      <h1>First, you must make some choices:</h1>
+      <% if params[:info].present? %>
+      <h3> <%= params[:info] %> </h3>
+      <% end %>
+      <%= form_tag(tictactoe_url, method: "post") %>
+      <ul>
+        <li style="list-style-type: none;">Choose Your Weapon: <%= select_tag(:weapon, options_for_select(["The X", "The O"]), :prompt => "X or O?") %></li>
+        <li style="list-style-type: none;">Strike first, or defer? <%= select_tag(:strike, options_for_select(["I'll deliver the first blow", "I'll give you the honor"]), :prompt => "Choose your destiny") %></li>
+        <li style="list-style-type: none;">_________________________________</li>
+        <li style="list-style-type: none;"> Prepare to be foiled! <%= submit_tag "Submit to domination" %> </li>
+      </ul>
+
+    </body>
+</html>
