@@ -50,7 +50,7 @@ strategy = 7;
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
-}else if(clicks == 1){
+}else if(clicks == 6){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
   var c=document.getElementById("canv8");
@@ -59,6 +59,24 @@ strategy = 7;
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
   strategy = "thwart1";
+}else if(clicks == 7){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = 6;
+}else if(clicks == 8){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = 8;
 }else if(strategy == "thwart3"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
@@ -132,13 +150,31 @@ var ctx=c.getContext("2d");
 }else if(strategy == "thwart9"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
-  var c=document.getElementById("canv4");
+  var c=document.getElementById("canv7");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
   strategy = "thwart1";
 }else if(strategy == "thwart1"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
+}else if(strategy == 6){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
+}else if(strategy == 8){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
   var c=document.getElementById("canv7");
@@ -188,7 +224,7 @@ strategy = 9;
 }else if(strategy == "thwart9"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
-  var c=document.getElementById("canv4");
+  var c=document.getElementById("canv8");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
@@ -198,6 +234,15 @@ strategy = 9;
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
   var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
+}else if(strategy == 6){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
@@ -262,6 +307,33 @@ strategy = 9;
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
   strategy = "win";
+}else if(strategy == 8){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
+}else if(strategy == "thwart3"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
+}else if(strategy == "thwart97"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
 };
 }
 
@@ -282,7 +354,7 @@ var c=document.getElementById("canv9");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75)
-clicks = clicks + 1;
+clicks = clicks + 6;
 strategy = 1;
 }else if(strategy == 7){
   ctx.font="70px Arial";
@@ -312,6 +384,33 @@ strategy = 1;
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
+}else if(strategy == 6){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "thwart6";
+}else if(strategy == 8){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "thwart6";
+}else if(strategy == "thwart7"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "thwart6";
 };
 }
 
@@ -325,7 +424,7 @@ var c=document.getElementById("canv9");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75);
-clicks = clicks + 1;
+clicks = clicks + 7;
 strategy = 1;
 }else if(strategy == 9){
   ctx.font="70px Arial";
@@ -353,7 +452,7 @@ strategy = 1;
 }else if(strategy == "thwart9"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
-  var c=document.getElementById("canv4");
+  var c=document.getElementById("canv2");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
@@ -363,6 +462,15 @@ strategy = 1;
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
   var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
+}else if(strategy == 8){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
@@ -381,7 +489,7 @@ var c=document.getElementById("canv9");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75)
-clicks = clicks + 1;
+clicks = clicks + 8;
 strategy = 1;
 }else if(strategy == 7){
   ctx.font="70px Arial";
@@ -430,12 +538,21 @@ strategy = 1;
 }else if(strategy == "thwart9"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
-  var c=document.getElementById("canv4");
+  var c=document.getElementById("canv3");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
   strategy = "thwart1";
+}else if(strategy == 6){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
 };
 }
 
@@ -458,7 +575,7 @@ strategy = 3;
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
-}else if(clicks == 1){
+}else if(strategy = 9){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
   var c=document.getElementById("canv6");
@@ -466,7 +583,7 @@ strategy = 3;
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
-  strategy = "thwart9";
+  strategy = "thwart97";
 }else if(strategy == "thwart7"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
