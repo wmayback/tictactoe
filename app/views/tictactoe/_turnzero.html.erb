@@ -53,7 +53,7 @@ strategy = 7;
 }else if(clicks == 1){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
-  var c=document.getElementById("canv4");
+  var c=document.getElementById("canv8");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
@@ -141,12 +141,12 @@ var ctx=c.getContext("2d");
 }else if(strategy == "thwart1"){
   ctx.font="70px Arial";
   ctx.fillText("<%=session['weapon']%>",27,75);
-  var c=document.getElementById("canv3");
+  var c=document.getElementById("canv7");
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
-  strategy = "stillachance7";
+  strategy = "win";
 };
 }
 
@@ -194,6 +194,15 @@ strategy = 9;
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
   strategy = "thwart1";
+}else if(strategy == "thwart1"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
 };
 }
 
@@ -244,6 +253,15 @@ strategy = 9;
   var ctx=c.getContext("2d");
   ctx.font="70px Arial";
   ctx.fillText("<%=session['shield']%>",27,75);
+}else if(strategy == "thwart1"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
 };
 }
 
@@ -341,6 +359,15 @@ strategy = 1;
   ctx.fillText("<%=session['shield']%>",27,75);
   clicks = clicks + 1;
   strategy = "thwart1";
+}else if(strategy == "thwart1"){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  clicks = clicks + 1;
+  strategy = "win";
 };
 }
 
