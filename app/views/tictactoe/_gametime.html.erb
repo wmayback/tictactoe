@@ -21,99 +21,815 @@
               <canvas id = "canv8" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked8()"></canvas>
               <canvas id = "canv9" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked9()"></canvas></li>
       </ul>
-<% if session[:turn] == "1" %>
 
 <script>
+var strategy;
+strategy = 0
+
 function canvasClicked1(){
 var c=document.getElementById("canv1");
 var ctx=c.getContext("2d");
+if(strategy == 0){
 ctx.font="70px Arial";
 ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv3");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['shield']%>",27,75);
-}
-function canvasClicked2(){
-var c=document.getElementById("canv2");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv1");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['shield']%>",27,75)
-}
-function canvasClicked3(){
-var c=document.getElementById("canv3");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv1");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['shield']%>",27,75);
-}
-function canvasClicked4(){
-var c=document.getElementById("canv4");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv1");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['shield']%>",27,75)
-}
-function canvasClicked5(){
 var c=document.getElementById("canv5");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 1;
+};
+}
+
+function canvasClicked2(){
+var c=document.getElementById("canv2");
+var ctx=c.getContext("2d");
+if(strategy == 0){
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 2;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 12;
+}else if(strategy == 14){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 16){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 167){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 17){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 18){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 19){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 194){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+};
+}
+
+function canvasClicked3(){
+var c=document.getElementById("canv3");
+var ctx=c.getContext("2d");
+if(strategy == 0){
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 3;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 13;
+}else if(strategy == 14){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 143;
+}else if(strategy == 17){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 176){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 18){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 183;
+}else if(strategy == 19){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 194){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 2){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv1");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 23;
+}else if(strategy == 24){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+};
+}
+
+function canvasClicked4(){
+var c=document.getElementById("canv4");
+var ctx=c.getContext("2d");
+if(strategy == 0){
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 4;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 14;
+}else if(strategy == 12){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 13){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 16){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 18){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 183){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 19){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 194;
+}else if(strategy == 2){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv1");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 24;
+}else if(strategy == 23){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 239){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+};
+}
+
+function canvasClicked5(){
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+if(strategy == 0){
+ctx.font="70px Arial";
 ctx.fillText("<%=session['weapon']%>",27,75);
 var c=document.getElementById("canv1");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 5;
+};
 }
+
 function canvasClicked6(){
 var c=document.getElementById("canv6");
 var ctx=c.getContext("2d");
+if(strategy == 0){
 ctx.font="70px Arial";
 ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv9");
+var c=document.getElementById("canv5");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
-ctx.fillText("<%=session['shield']%>",27,75)
+ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 6;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 16;
+}else if(strategy == 12){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 127){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 13){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 138){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 14){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 143){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 17){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv2");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 176;
+}else if(strategy == 18){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 183){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 2){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 26;
+}else if(strategy == 23){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 24){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 249){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+};
 }
+
 function canvasClicked7(){
 var c=document.getElementById("canv7");
 var ctx=c.getContext("2d");
+if(strategy == 0){
 ctx.font="70px Arial";
 ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv9");
+var c=document.getElementById("canv5");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 7;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 17;
+}else if(strategy == 12){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 127;
+}else if(strategy == 13){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 138){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 16){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 167;
+}else if(strategy == 19){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 2){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv1");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 27;
+}else if(strategy == 23){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 239){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 24){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 249){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+};
 }
+
 function canvasClicked8(){
 var c=document.getElementById("canv8");
 var ctx=c.getContext("2d");
+if(strategy == 0){
 ctx.font="70px Arial";
 ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv9");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['shield']%>",27,75)
-}
-function canvasClicked9(){
-var c=document.getElementById("canv9");
-var ctx=c.getContext("2d");
-ctx.font="70px Arial";
-ctx.fillText("<%=session['weapon']%>",27,75);
-var c=document.getElementById("canv7");
+var c=document.getElementById("canv5");
 var ctx=c.getContext("2d");
 ctx.font="70px Arial";
 ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 8;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 18;
+}else if(strategy == 12){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 127){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 13){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 138;
+}else if(strategy == 14){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 143){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 16){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 167){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 17){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 176){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 19){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 194){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 2){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv1");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 28;
+}else if(strategy == 23){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 239){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv4");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 24){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv9");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 249){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+};
+}
+
+function canvasClicked9(){
+var c=document.getElementById("canv9");
+var ctx=c.getContext("2d");
+if(strategy == 0){
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+strategy = 9;
+}else if(strategy == 1){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 19;
+}else if(strategy == 12){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 127){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 13){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 138){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 14){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 143){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 16){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv7");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 167){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 17){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 176){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv8");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 18){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "game over";
+}else if(strategy == 183){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = "draw";
+}else if(strategy == 2){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 29;
+}else if(strategy == 23){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv6");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 239;
+}else if(strategy == 24){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv3");
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = 249;
+};
 }
 </script>
-<%end%>
 </html>
