@@ -26,6 +26,16 @@
 var strategy;
 strategy = 0
 
+function course(boxnum, outcome){
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['weapon']%>",27,75);
+  var c=document.getElementById("canv"+boxnum);
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = outcome;
+}
+
 function canvasClicked1(){
 var c=document.getElementById("canv1");
 var ctx=c.getContext("2d");
