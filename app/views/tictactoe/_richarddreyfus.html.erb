@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> "William Mayback's Tic Tac Toe Challenge" </title>
+      <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+      <style>
+      body { width: 1000px; margin: 20px auto;}
+      </style>
+    </head>
+
+       <ul>
+            <li style="list-style-type: none;">
+              <canvas id = "canv1" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked1()"></canvas>
+              <canvas id = "canv2" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked2()"></canvas>
+              <canvas id = "canv3" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked3()"></canvas></li>
+            <li style="list-style-type: none;">
+              <canvas id = "canv4" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked4()"></canvas>
+              <canvas id = "canv5" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked5()"></canvas>
+              <canvas id = "canv6" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked6()"></canvas></li>
+            <li style="list-style-type: none;">
+              <canvas id = "canv7" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked7()"></canvas>
+              <canvas id = "canv8" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked8()"></canvas>
+              <canvas id = "canv9" width="100" height="100" style="border:5px solid cyan" onclick = "canvasClicked9()"></canvas></li>
+      </ul>
+
+<!-- turn 1 logic -->
+
+<script>
+var strategy;
+strategy = 0;
+
+function course(boxnum, outcome){
+  var c=document.getElementById(boxnum);
+  var ctx=c.getContext("2d");
+  ctx.font="70px Arial";
+  ctx.fillText("<%=session['shield']%>",27,75);
+  strategy = outcome;
+}
+
+function canvasClicked1(){
+var c=document.getElementById("canv1");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv3",1);
+}else if(strategy == 9){
+course("canv3","game over");
+}else if(strategy == 6){
+course("canv8",61);
+}else if(strategy == 7){
+course("canv4",71);
+}else if(strategy == 8){
+course("canv3",81);
+}else if(strategy == 93){
+course("canv4","game over");
+}else if(strategy == 934){
+course("canv8","game over");
+};
+}
+
+function canvasClicked2(){
+var c=document.getElementById("canv2");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv1",2);
+}else if(strategy == 1){
+course("canv7","game over");
+}else if(strategy == 3){
+course("canv9","game over");
+}else if(strategy == 4){
+course("canv9","game over");
+}else if(strategy == 6){
+course("canv1","game over");
+}else if(strategy == 7){
+course("canv1","game over");
+}else if(strategy == 8){
+course("canv1","game over");
+}else if(strategy == 9){
+course("canv3","game over");
+}else if(strategy == 17){
+course("canv6","game over");
+}else if(strategy == 39){
+course("canv4","game over");
+}else if(strategy == 394){
+course("canv7","draw");
+}else if(strategy == 49){
+course("canv7","game over");
+}else if(strategy == 61){
+course("canv7","game over");
+}else if(strategy == 71){
+course("canv6","game over");
+}else if(strategy == 81){
+course("canv7","game over");
+}else if(strategy == 93){
+course("canv4","game over");
+};
+}
+
+function canvasClicked3(){
+var c=document.getElementById("canv3");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv1",3);
+}else if(strategy == 2){
+course("canv9","game over");
+}else if(strategy == 4){
+course("canv9","game over");
+}else if(strategy == 6){
+course("canv1","game over");
+}else if(strategy == 7){
+course("canv1","game over");
+}else if(strategy == 8){
+course("canv1","game over");
+}else if(strategy == 29){
+course("canv4","game over");
+}else if(strategy == 294){
+course("canv8","draw");
+}else if(strategy == 61){
+course("canv7","game over");
+}else if(strategy == 71){
+course("canv6","game over");
+}else if(strategy == 716){
+course("canv8","game over");
+}else if(strategy == 9){
+course("canv6",93);
+};
+}
+
+
+function canvasClicked4(){
+var c=document.getElementById("canv4");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv1",4);
+}else if(strategy == 1){
+course("canv7","game over");
+}else if(strategy == 2){
+course("canv9","game over");
+}else if(strategy == 3){
+course("canv9","game over");
+}else if(strategy == 6){
+course("canv1","game over");
+}else if(strategy == 7){
+course("canv1","game over");
+}else if(strategy == 8){
+course("canv1","game over");
+}else if(strategy == 9){
+course("canv3","game over");
+}else if(strategy == 29){
+course("canv7",294);
+}else if(strategy == 39){
+course("canv8",394);
+}else if(strategy == 61){
+course("canv7","game over");
+}else if(strategy == 81){
+course("canv7","game over");
+}else if(strategy == 93){
+course("canv2",934);
+};
+}
+
+{
+var c=document.getElementById("canv5");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['shield']%>",27,75);
+}
+
+function canvasClicked6(){
+var c=document.getElementById("canv6");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv9",6);
+}else if(strategy == 1){
+course("canv7","game over");
+}else if(strategy == 2){
+course("canv9","game over");
+}else if(strategy == 3){
+course("canv9","game over");
+}else if(strategy == 4){
+course("canv9","game over");
+}else if(strategy == 6){
+course("canv1","game over");
+}else if(strategy == 7){
+course("canv1","game over");
+}else if(strategy == 8){
+course("canv1","game over");
+}else if(strategy == 9){
+course("canv3","game over");
+}else if(strategy == 17){
+course("canv2",176);
+}else if(strategy == 49){
+course("canv2","game over");
+}else if(strategy == 71){
+course("canv2",716);
+}else if(strategy == 81){
+course("canv7","game over");
+};
+}
+
+function canvasClicked7(){
+var c=document.getElementById("canv7");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv9",7);
+}else if(strategy == 2){
+course("canv9","game over");
+}else if(strategy == 3){
+course("canv9","game over");
+}else if(strategy == 4){
+course("canv9","game over");
+}else if(strategy == 6){
+course("canv1","game over");
+}else if(strategy == 8){
+course("canv1","game over");
+}else if(strategy == 1){
+course("canv4",17);
+}else if(strategy == 29){
+course("canv4","game over");
+}else if(strategy == 39){
+course("canv4","game over");
+}else if(strategy == 394){
+course("canv2","game over");
+}else if(strategy == 49){
+course("canv2","game over");
+}else if(strategy == 61){
+course("canv2","game over");
+}else if(strategy == 81){
+course("canv6","game over");
+};
+}
+
+function canvasClicked8(){
+var c=document.getElementById("canv8");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv9",8);
+}else if(strategy == 1){
+course("canv7","game over");
+}else if(strategy == 2){
+course("canv9","game over");
+}else if(strategy == 3){
+course("canv9","game over");
+}else if(strategy == 4){
+course("canv9","game over");
+}else if(strategy == 6){
+course("canv1","game over");
+}else if(strategy == 7){
+course("canv1","game over");
+}else if(strategy == 9){
+course("canv3","game over");
+}else if(strategy == 17){
+course("canv6","game over");
+}else if(strategy == 176){
+course("canv9","draw");
+}else if(strategy == 29){
+course("canv4","game over");
+}else if(strategy == 294){
+course("canv3","game over");
+}else if(strategy == 39){
+course("canv4","game over");
+}else if(strategy == 49){
+course("canv2","game over");
+}else if(strategy == 71){
+course("canv6","game over");
+}else if(strategy == 716){
+course("canv3","draw");
+}else if(strategy == 93){
+course("canv4","game over");
+}else if(strategy == 934){
+course("canv1","draw");
+};
+}
+
+function canvasClicked9(){
+var c=document.getElementById("canv9");
+var ctx=c.getContext("2d");
+ctx.font="70px Arial";
+ctx.fillText("<%=session['weapon']%>",27,75);
+if(strategy == 0){
+course("canv7",9);
+}else if(strategy == 1){
+course("canv7","game over");
+}else if(strategy == 17){
+course("canv6","game over");
+}else if(strategy == 176){
+course("canv8","game over");
+}else if(strategy == 2){
+course("canv6",29);
+}else if(strategy == 3){
+course("canv6",39);
+}else if(strategy == 4){
+course("canv3",49);
+};
+}
+</script>
+
+</html>
