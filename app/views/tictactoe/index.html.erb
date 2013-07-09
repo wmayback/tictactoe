@@ -14,6 +14,7 @@
 
           <% if session["weapon"].present? %>
             <h2> <%= link_to "Restart",  "/tictactoe/query" %> <h2>
+            <h2> <%= link_to "Refresh",  "/tictactoe" %> <h2>
           <%else%>
             <h2> <%= link_to "Try Me!", "/tictactoe/query" %> <h2>
           <%end%>
